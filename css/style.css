@@ -1,0 +1,29 @@
+#wrapper {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width:100vw;
+    height:100vh;
+}
+
+nav {
+    background:lightcoral;
+    color:white;
+    display:flex;
+    flex-direction: row;
+    height:100px;
+}
+
+.navlink {
+    color:white;
+    width:100%;
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+}
+
+.navlink:hover {
+    color:lightcoral;
+    background: white;
+}
