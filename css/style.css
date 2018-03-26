@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     width:100vw;
-    height:100vh;
+    min-height:100vh;
 }
 
 nav {
@@ -26,4 +26,23 @@ nav {
 .navlink:hover {
     color:lightcoral;
     background: white;
+}
+
+input {
+    display:block;
+}
+
+section {
+    min-height: 100px;
+    display:flex;
+    flex-direction: row;
+    width:100vw;
+    justify-content: space-around;
+    border:grey 1px solid;
+    margin-top:10px;
+    align-items: center;
+}
+
+section:hover {
+    background:lightgrey;
 }
