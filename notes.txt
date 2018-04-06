@@ -1,0 +1,12 @@
+Directives:
+
+for-directive:: v-for="friend in friends"
+v-model-directive:: v-model="friend.first" (Synca med datan, two-way data-binding)
+
+Event listeners
+
+v-on:click (koppla till metod eller skriv direkt (undvik logik i templaten))
+
+binding
+
+v-bind:keyfriend="valuefriend". Bind egen "vue-tag" med dess component (tex skicka med keyfriend med värdet vf till en komponent (som har props med keyfriend))

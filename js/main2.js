@@ -1,4 +1,7 @@
-Vue.component('friend',{
+
+// Egentligen i en egen fil
+Vue.component('friend-component',{
+    props: ['friend'],
     filters: {
 
     },
@@ -12,13 +15,11 @@ Vue.component('friend',{
     },
     template: `
     <div>
-        <section v-for="friend in frender">
             <h3>{{friend.city}}</h3> 
             <h3>{{friend.age}}</h3> 
             <!--<button v-on:click="friend.age = friend.age + 1">+</button>-->
             <button v-on:click="incrementAge(friend)">+</button>
-            <button v-on:click="decreaseAge(friend)">+</button>
-        </section>
+            <button v-on:click="decreaseAge(friend)">-</button>
     </div>
     `
 });
@@ -27,19 +28,6 @@ Vue.component('friend',{
 
 const app = new Vue({
     el: "#app2",
-    template: `
-    <div id="wrapper">
-        <nav>
-            <a href="index.html" class="navlink">Start</a>
-            <a href="components.html" class="navlink">Components</a>
-            <a href="#" class="navlink">Länk3</a>
-            <a href="#" class="navlink">Länk4</a>
-        </nav>
-        <h2>5. Components dude!</h2>
-        
-       
-    </div>
-    `,
     data: {
         frender:[
             {
@@ -62,7 +50,19 @@ const app = new Vue({
             },
         ]
         
-    }
+    },
+    template: `
+    <div id="wrapper">
+        <nav>
+            <a href="index.html" class="navlink">Start</a>
+            <a href="components.html" class="navlink">Components</a>
+            <a href="#" class="navlink">Länk3</a>
+            <a href="#" class="navlink">Länk4</a>
+        </nav>
+        <h2>5. Components dude!</h2>
+        <friend-component v-for="item in frender" v-bind:friend="item" /> 
+    </div>
+    `
 
 })
 
